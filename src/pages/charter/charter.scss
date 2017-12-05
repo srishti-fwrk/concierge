@@ -1,0 +1,144 @@
+page-charter {
+
+    .content {    
+   background-color: #222;
+    }
+
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        padding-bottom: 0;
+        background: #fff;
+        margin-bottom: 15px;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .deletebtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .deletebtn ion-icon{
+        color: #ccc;
+    }
+    .customcard .card-content{
+        padding: 0;
+    }
+    .charter_txt{
+        padding: 20px 20px 0;
+    }
+    .textbox {
+        padding: 16px 16px 5px 16px;
+        float: left;
+        width: 100%;
+    }
+    
+    .textbox h2 {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .textbox p {
+        color: #515151;
+        margin-top: 5px;
+    }
+    .mainbox p {
+        margin: 0 0 5px 0 !important;
+        padding-left: 20px;
+        position: relative;
+        line-height: 20px;
+
+      
+    }
+    .dotbullet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #ccc;
+        padding-top: 3px;
+
+    }
+
+    .active.dotbullet {
+        color: #1f1824;
+        padding-top: 3px;
+    }
+    .driver {
+        float: left;
+        width: 100%;
+        background: #f9f9f9;
+        border-top: 1px solid #d3d3d3;
+        text-align: center;
+        padding:8px 16px;
+    }
+    .driver p {
+        margin: 0 0 5px 0 !important;
+        padding-left: 20px;
+        position: relative;
+        text-align: left;
+    }
+    .photo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #929292;
+    }
+    .segment-button{
+        max-width: 150px !important;
+    }
+    .toolbar-background{
+        background: none;
+        border: none;
+    }
+    
+.fixed-content{
+    margin-top: 108px;
+    margin-bottom: 49px;
+    background-color: #222;
+}
+.segment{
+        background-color: #f4f4f4;
+}
+
+.textbox {
+    padding: 16px 16px 5px 16px;
+    float: left;
+    width: 100%;
+    background-color: #010101;
+}
+ .driver {
+    float: left;
+    width: 100%;
+    background: #010101;
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    padding: 8px 16px;
+    color: #ccc;
+}
+
+.active.dotbullet {
+    color: #38333c;
+    padding-top: 3px;
+}
+.textbox p {
+    color: #ccc;
+    
+
+}
+
+
+.icon.icon-ios.ion-ios-trash{
+    color: #ccc;
+} 
+.icon.icon-ios.ion-ios-trash  {
+
+    color: #ccc;
+}
+.shw_tm{
+    color: #ccc;
+}
+}
+
+

@@ -1,0 +1,105 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header hidden>
+  
+    <ion-navbar  >
+      <ion-title>signup</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding style="background-color:#222;">
+  
+    <div class="loginsec">
+      <h3>Create Account</h3>
+      <h5>Enter your account details</h5>
+      <form #signupForm="ngForm" novalidate >
+      <div class="form_outer">
+        <ion-list no-border>
+  
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="data.name" name="name"  placeholder="Name" #name='ngModel' required></ion-input>
+          </ion-item>
+          <ion-label  class="alert alert-danger" color="danger">
+          <div *ngIf="name.errors && (name.dirty || name.touched)">
+         <div [hidden]="!name.errors.required" >
+           Field is required
+          </div>
+      </div>
+      </ion-label>
+          <ion-item>
+            <ion-input type="tel" [(ngModel)]="data.phone" name="phone" placeholder="Mobile Number"  #phone='ngModel' pattern='[0-9]+' maxlength="15" required  ></ion-input>
+          </ion-item>
+          <ion-label class="alert alert-danger" color="danger">
+  
+         <div *ngIf="phone.errors && (phone.dirty || phone.touched)">
+         <div [hidden]="!phone.errors.required" >
+           Field is required
+          </div>
+          <div [hidden]="!phone.errors.pattern" >
+           Invalid Format
+          </div>
+           <div [hidden]="!phone.errors.maxlength" >
+           Maximum 15 number
+          </div>
+      </div>
+      </ion-label>
+          <ion-item>
+            <ion-input type="email" [(ngModel)]="data.email" name="email" placeholder="Email Address"   #email='ngModel' required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$' required  ></ion-input>
+          </ion-item>
+        <ion-label  class="alert alert-danger" color="danger">
+       <div *ngIf="email.errors && (email.dirty || email.touched)" >
+         <div [hidden]="!email.errors.required" >
+           Email is required
+          </div>
+          <div [hidden]="!email.errors.pattern" >
+           Invalid email
+          </div>
+       </div>
+      </ion-label>
+  
+  
+          <ion-item>
+            <ion-input type="password" minlength="6" [(ngModel)]="data.password" name="password" placeholder="Password" #password='ngModel' required ></ion-input>
+          </ion-item>
+       <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="password.errors && (password.dirty || password.touched)">
+          <div [hidden]="!password.errors.required" >
+           Password is required
+          </div>
+      </div>
+       <div *ngIf="password.errors && (password.dirty || password.touched)" >
+         <div [hidden]="!password.errors.minlength" >
+            Minimum length 6 character 
+          </div>
+      </div>
+     </ion-label>
+        
+          <ion-item>
+            <ion-input type="password" minlength="6" [(ngModel)]="data.cpassword" name="cpassword" placeholder="Confirm Password" #cpassword='ngModel' required></ion-input>
+          </ion-item>
+    <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)" >
+         <div [hidden]="!cpassword.errors.required" >
+           Confirm password is required
+          </div>
+      </div>
+      </ion-label>
+      
+          <button class="radius margin_top" (click)="register(signupForm)" [disabled]="!signupForm.form.valid" ion-button full color="light" >SIGN UP</button>
+          
+          <div class="create">I have an account? <span (click)="signinPage()"> Sign In </span> </div>
+        </ion-list>
+      </div>
+  </form>
+    </div>
+  
+    <marquee direction = "right"><img width="120px" src="assets/img/cars.gif"></marquee>
+  
+  </ion-content>
+  

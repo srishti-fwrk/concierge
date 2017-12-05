@@ -1,0 +1,98 @@
+page-home {
+    .main_bg{
+        color: #222;
+
+    }
+   
+
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        padding: 0 !important;
+    }
+    .customcard .card-content{
+        padding: 0;
+    }
+    .toolbar-md-navyb .toolbar-background-md {
+        background-color: #222;
+    }
+    .userpro_outer {
+    margin-bottom: 0.05px;
+    position: relative;
+    padding: 5vh 0;
+    text-align: center;
+    background-color: #010101;
+    border:0px solid #ccc;
+}
+    
+    .userpic_pro {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 5px solid #ccc;
+        border-radius: 50%;
+    }
+    .userpro_outer h2{
+        color:#ccc !important;
+    }
+    .userpic_pro img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+     .userpro_outer h1{
+         color: #ccc;
+         margin-top: 10px;
+         text-transform: capitalize;
+     }
+     .userpro_outer p{
+         color: #ccc;
+         text-transform: uppercase;
+     }
+     .usertxt {
+        float: left;
+        width: 100%;
+        background: #010101;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        padding: 5px 0 20px;
+    }
+    .usertxt h2{
+         color: #ccc;
+         margin-top: 10px;
+         font-weight: 500;
+         font-size: 18px;
+         padding: 15px 0 10px;
+     }
+     .usertxt p {
+        text-transform: uppercase;
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+    .usertxt span{
+        color: #ccc;
+    }
+    .rm_toppadding {
+    padding-top: 0;
+    }
+
+    .border_right {
+        border-right: 1px solid #d3d3d3;
+    }
+.span point p{
+    color:#fff;
+}
+.userpic_pro h2{
+    color:#ccc;
+}
+page-home .userpro_outer {
+    margin-bottom: 0.05px;
+    position: relative;
+    padding: 5vh 0;
+    text-align: center;
+    background-color: #010101;
+    border: 0px solid #ccc;
+}
+}
+

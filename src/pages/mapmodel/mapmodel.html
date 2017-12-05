@@ -1,0 +1,39 @@
+<!--
+  Generated template for the MapmodelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="navyb">
+    <ion-title>Select location</ion-title>
+    <ion-buttons start (click)="clsmodel()">
+        <button clear ion-button>Cancel</button>
+    </ion-buttons>
+    <ion-buttons end (click)="closeModal()">
+        <button clear ion-button>Save</button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="navyb">
+    <ion-searchbar 
+    [(ngModel)]="autocomplete.query" 
+    [showCancelButton]="true" 
+    (ionInput)="updateSearch()" 
+    (ionCancel)="dismiss()"
+    placeholder="Start typing and select ...">
+    </ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of autocompleteItems" 
+      (click)="chooseItem(item)">
+      {{ item.description }}
+      </ion-item>
+      </ion-list>
+  </ion-toolbar>
+  <div #map id="map" style="height:100vh;position: initial;float:left;width:100%;"></div>
+  
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>

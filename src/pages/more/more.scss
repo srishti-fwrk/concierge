@@ -1,0 +1,60 @@
+page-more {
+  
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+    }
+    .customcard card card-ios {
+background-clip: #010101;
+    }
+    .fixed-content {
+    margin-top: 64px;
+    margin-bottom: 49px;
+    background-color: #222;
+}
+    .more_sec .item{
+        padding-left: 0;
+        font-size: 14px;
+        color: #ccc;
+        text-transform: uppercase;
+        border: none !important;
+        background-color: #010101;
+    }
+    .more_sec .item-inner{
+        padding-right: 0 !important;
+        border-bottom: 1px solid #ccc !important;
+    }
+    .more_sec :last-child .item-inner{
+        border: none !important;
+    }
+    .arrow_btn img{
+        width: 8px !important;
+        padding-top: 6px;
+    }
+    .arrow_btn {
+        margin-right: 0 !important;
+    }
+    .more_sec{
+        .label {
+            margin: 0px 8px 0px 0;
+        }
+    }
+    
+    .btnlist{
+        width: 100%;
+        float: left;
+        text-align: left;
+        background: #010101;
+        .icon{
+            float: left;
+        }
+        span{
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #ccc;
+            line-height: 44px;
+            float: left;
+            padding-left: 0;
+        }
+    }  
+}

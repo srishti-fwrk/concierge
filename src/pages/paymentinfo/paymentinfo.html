@@ -1,0 +1,39 @@
+<!--
+  Generated template for the PaymentinfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navyb">
+    <ion-title>Payment Information</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="main_bg">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+      </ion-refresher>
+  <ion-card class="customcard" *ngFor="let info of information">
+            <ion-card-content >
+              <div class="charter_txt"  >
+                <h2>{{info.Payment.created | date:'MMM d, yyyy'}}</h2>
+                <h2>{{info.SubscriptionPlan.plan}}</h2>
+                <!-- <p><ion-icon name="disc" style="font-size: 11px; margin-right: 5px; color:#181818;"></ion-icon>It Park rd, Phase - 1 Manima...</p>
+                <p><ion-icon name="disc" style="font-size: 11px; margin-right: 5px; color:#ccc;"></ion-icon>Mohali, Phase - 8 Manimajra</p> -->
+                <h3 *ngIf="info.Payment.flag == 0">REGISTRATION FEE <span> ${{info.SubscriptionPlan.registration_fee}}</span></h3>
+                <h3>CASH PAY <span> ${{info.SubscriptionPlan.plan_amount}}</span></h3>
+                <h3>TOTAL AMOUNT <span> ${{info.Payment.totalpayment}}</span></h3>
+              
+
+              </div>
+              <!-- <div class="charter_footer">
+                <p> <ion-icon name="person" style="font-size: 20px;margin-right: 8px;float: left;color:#181818;"></ion-icon> Driver allocation pending</p>
+              </div> -->
+            </ion-card-content>
+      </ion-card>
+
+</ion-content>

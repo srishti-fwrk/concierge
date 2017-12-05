@@ -1,0 +1,114 @@
+page-membershipplane {
+    .back-button{
+        display: none !important;
+    }
+    .main_bg {
+    background-color: #222 !important;
+}
+.customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        padding-bottom: 8px;
+       
+    }
+.customcard .card-content{
+        padding: 0;
+    }
+.charter_txt{
+        padding: 20px 20px 0;
+    }
+.price_tag {
+        background: url(../assets/img/pricebg.png);
+        width: 140px;
+        height: 65px;
+        background-size: 140px;
+        background-repeat: no-repeat;
+        float: right;
+        padding: 9px 7px 0 54px;
+        color: #ccc;
+        text-align: center;
+        white-space: normal;
+    }
+.plan_strip a {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    float: left;
+    margin-left: 22px;
+    border-radius: 30px;
+    margin-top: 27px;
+    width: 100px;
+    text-decoration: none;
+    color: #1f1824;
+    text-align: center;
+    background: #fff;
+}
+.membershipplane{
+    margin-bottom: 20px;
+    border: none !important;
+
+}
+.membershipplane .item-inner{
+    padding: 0 !important;
+    border: none !important;
+}
+.membershipplane .item-cover{
+    padding: 0 !important;
+}
+.membershipplane .label{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.radio-icon {
+    position: absolute !important; 
+    top: 7px;
+    right: 12px;
+}
+
+.scroll-content {
+    margin-top: 63px;
+    margin-bottom: 120px;
+    background-color: #222;
+}
+.userpro_outer{
+    background-color: #010101;
+    color: #ccc;
+}
+    .usertxt {
+        background-color: #010101;
+}
+
+
+page-mymembership .userpro_outer {
+    margin-bottom: 1px;
+    position: relative;
+    padding: 5vh 0;
+    text-align: center;
+   
+}
+.userpro_outer{
+    background-color: #010101;
+}
+
+ion-card.customcard.card.card-ios {
+        background-color: #010101;
+}
+.item-ios{
+        background-color: #010101;
+}
+.toolbar-background-ios {
+    background: #2f2f2f;
+}
+
+page-mymembership .userpro_outer h1 {
+    color: #ccc;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+
+    .fixed-content {
+ background-color: #222;
+}
+
+}

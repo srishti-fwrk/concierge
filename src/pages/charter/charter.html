@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar hideBackButton color="navyb">
+
+    <!--<ion-buttons start>
+    <button  ion-button color="light" clear (click)="cleanvalue()"><ion-icon style="font-size:30px;" name="arrow-back"></ion-icon></button>
+    </ion-buttons>-->
+
+
+    <ion-title>Charter</ion-title>
+  </ion-navbar>
+  <ion-toolbar style="background:none;">
+    <ion-title style="padding: 0 9px 1px;">
+      <ion-segment color="navyb" [(ngModel)]="segments">
+        <!-- <ion-segment-button  class="segment-button segment-activated" value="Upcoming" ng-reflect-value="sale" aria-pressed="true" [hidden]= "this.select == 1" (click)="upcoming()"> Upcoming  </ion-segment-button >
+            <ion-segment-button  class="segment-button segment-activated" value="Upcoming" ng-reflect-value="sale" aria-pressed="true" *ngIf = "this.select == 1" style="color:red" (click)="upcoming()">hghgghhg Upcoming  </ion-segment-button> -->
+        <ion-segment-button value="team" (click)="upcomingg()" class="segment-button segment-activated"> Upcoming </ion-segment-button>
+        <ion-segment-button value="past" (click)="past()"> Past </ion-segment-button>
+      </ion-segment>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding class="main_bg">
+
+  <div [ngSwitch]="segments">
+    
+  <ion-list style="margin:0;" *ngSwitchCase='"team"' >
+
+    <div class="customcard" *ngFor="let upcoming of updata">
+
+      <div class="deletebtn" (click)="showConfirm(upcoming.BookCab.id)">
+        <ion-icon style="font-size: 30px;color: #ccc;" name="trash"></ion-icon>
+      </div>
+
+      <div class="textbox" (click)="bookdetailsPage(upcoming.BookCab.id)">
+        <h2 class="shw_tm">{{upcoming.BookCab.pickup_date | date:'MMM d, yyyy'}} {{upcoming.BookCab.pickup_time}}</h2>
+        <p> {{upcoming.BookCab.vehicle_type}}, {{upcoming.BookCab.psenger_count}} Passengers ,{{upcoming.BookCab.luggage_count}}
+          Luggage </p>
+        <div class="mainbox">
+          <p text-wrap>
+            <ion-icon class="active dotbullet" name="disc"></ion-icon> {{upcoming.BookCab.pickup_address}} </p>
+          <p text-wrap>
+            <ion-icon class="dotbullet" name="disc"></ion-icon> {{upcoming.BookCab.dropoff_address}} </p>
+        </div>
+      </div>
+      <div class="driver">
+        <p *ngIf="upcoming.BookCab.driver_name == null">
+          <span class="photo">
+            <img width="12px" src="assets/img/user.png">
+          </span> Driver pending</p>
+        <p *ngIf="upcoming.BookCab.driver_name != null">
+          <span class="photo">
+            <img width="12px" src="assets/img/user.png">
+          </span> Driver assigned</p>
+      </div>
+
+    </div>
+  </ion-list>
+  <ion-list  *ngSwitchCase='"past"'>
+
+
+    <div class="customcard" *ngFor="let pdata of pastdata" (click)="bookdetailsPage(pdata.BookCab.id)">
+      <div class="textbox">
+        <h2 class="shw_tm">{{pdata.BookCab.pickup_date | date:'MMM d, yyyy'}} {{pdata.BookCab.pickup_time}}</h2>
+        <p> {{pdata.BookCab.vehicle_type}}, {{pdata.BookCab.psenger_count}} Passengers, {{pdata.BookCab.luggage_count}} Luggage
+          </p>
+        <div class="mainbox">
+          <p text-wrap>
+            <ion-icon class="active dotbullet" name="disc"></ion-icon>{{pdata.BookCab.pickup_address}}</p>
+          <p text-wrap>
+            <ion-icon class="dotbullet" name="disc"></ion-icon> {{pdata.BookCab.dropoff_address}} </p>
+        </div>
+      </div>
+      <div class="driver">
+        <p *ngIf="pdata.BookCab.driver_name == null">
+          <span class="photo">
+            <img width="12px" src="assets/img/user.png">
+          </span> Driver pending</p>
+        <p *ngIf="pdata.BookCab.driver_name != null">
+          <span class="photo">
+            <img width="12px" src="assets/img/user.png">
+          </span> Driver assigned </p>
+      </div>
+    </div>
+
+
+
+  </ion-list>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+</ion-content>

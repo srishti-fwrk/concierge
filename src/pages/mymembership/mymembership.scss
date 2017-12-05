@@ -1,0 +1,164 @@
+page-mymembership {
+
+
+.main_bg {
+    background-color: #222;
+}
+
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        padding: 0 !important;
+    }
+    .customcard .card-content{
+        padding: 0;
+    }
+    .userpro_outer {
+        margin-bottom: 10px;
+        position: relative;
+        padding: 5vh 0;
+        text-align: center;
+    }
+    .userpic_pro {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 5px solid #ccc;
+        border-radius: 50%;
+    }
+    .userpic_pro img{
+        border-radius: 50%;
+    }
+     .userpro_outer h1{
+         color: #ccc;
+         margin-top: 10px;
+         text-transform: capitalize;
+     }
+     .userpro_outer p{
+         color: #ccc;
+         text-transform: uppercase;
+     }
+     .usertxt {
+        float: left;
+        width: 100%;
+        background: #010101;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        padding: 5px 0 20px;
+    }
+    .usertxt h2{
+         color: #ccc;
+         margin-top: 10px;
+         font-weight: 500;
+         font-size: 18px;
+         padding: 15px 0 10px;
+     }
+     .usertxt p {
+        text-transform: uppercase;
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+    .rm_toppadding {
+    padding-top: 0;
+    }
+
+    .border_right {
+        border-right: 1px solid #ccc;
+    }
+
+    .userplane {
+    width: 100px;
+    height: 100px;
+    background: #222;
+    color: #fff;
+    margin: auto;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 19px;
+    position: relative;
+    box-shadow: 0 0 12px #000 inset;
+    
+}
+
+.userplane{
+    b{
+        font-size: 18px;
+    }
+    
+}
+
+.userplane span {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+}
+h1.freeact {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+p.subhead {
+    text-transform: inherit !important;
+    padding: 10px 10px 0 10px;
+}
+
+.userplane::first-letter {
+    font-size: 15px;
+    padding-right: 2px;
+}
+
+.userplane::after {
+    content: "";
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 51px 0 0 50px;
+}
+
+page-mymembership .userplane {
+    width: 100px;
+    height: 100px;
+    background: #010101;
+    color: #ccc;
+    margin: auto;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 19px;
+    position: relative;
+    -webkit-box-shadow: 0 0 12px #000 inset;
+    box-shadow: 0 0 12px #000 inset;
+}
+.userpro_outer {
+    margin-bottom:1px;
+    position: relative;
+    padding: 5vh 0;
+    text-align: center;
+    background-color: #010101;
+}
+    
+span.point {
+    color: #ccc;
+}
+
+.card-ios p {
+    
+    color: #ccc;
+}
+    
+    
+.scroll-content {
+    background-color: #222;
+}
+
+
+.userplane span {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    margin-top: 10px;
+}
+}

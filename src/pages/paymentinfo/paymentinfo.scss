@@ -1,0 +1,53 @@
+page-paymentinfo {
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        padding: 0 !important;
+    }
+    .customcard .card-content{
+        padding: 0;
+    }
+    .charter_txt{
+        padding: 20px;
+    }
+    .charter_txt h2 {
+        font-size: 17px;
+        margin: 0;
+        font-weight: 500;
+    }
+    .charter_footer {
+        float: left;
+        width: 100%;
+        background: #f9f9f9;
+        border-top: 1px solid #d3d3d3;
+        text-align: left;
+        padding: 10px 20px;
+    }
+    .charter_txt h3 span {
+        float: right;
+        font-weight: 500;
+    }
+
+    .charter_txt h3 {
+        margin: 10px 0;
+        float: left;
+        width: 100%;
+        font-weight: 500;
+    }
+    .main_bg {
+        background-color: #222;
+ 
+    }
+    .charter_txt {
+    background: #010101;
+    color: #ccc;
+}
+
+    .customcard.card.card-ios {
+        background-color: #010101;
+    color: #ccc;
+
+}
+
+}
+

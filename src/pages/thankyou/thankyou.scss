@@ -1,0 +1,25 @@
+page-thankyou {
+    .thankyou {
+        position: absolute;
+        height: 200px;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 23px #ccc;
+    }
+    .back-button{
+        display: none;
+    }
+    .thankyou p {
+        font-size: 18px;
+        margin: 0 0 15px 0;
+    }
+
+}

@@ -1,0 +1,58 @@
+
+<ion-header hidden>
+  
+    <ion-navbar>
+      <ion-title>Sign In</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding style="background-color:#222">
+  
+    <div class="loginsec">
+      <h3>Login</h3>
+      <!-- <h5>Enter your active account detail</h5> -->
+     <div class="form_outer">
+        <ion-list no-border>
+   <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" novalidate>
+      
+          <ion-item>
+            <ion-input type="email" [(ngModel)]="data.email" name="email" placeholder="Email Address" #email='ngModel' pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$' required></ion-input>
+          </ion-item>
+          <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="email.errors && (email.dirty || email.touched)" >
+          <div [hidden]="!email.errors.required" >
+           Email is required
+          </div>
+          <div [hidden]="!email.errors.pattern" >
+           Invalid email
+          </div>
+          </div>
+         </ion-label>
+  
+          <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="data.password" name="password" #password='ngModel' required></ion-input>
+          </ion-item>
+     <ion-label class="alert alert-danger" color="danger">
+      <div *ngIf="password.errors && (password.dirty || password.touched)">
+         <div [hidden]="!password.errors.required" >
+           Password is required
+          </div>
+      </div>
+      </ion-label>
+          <button class="radius margin_top" type="submit" [disabled]="!loginForm.form.valid" ion-button full color="light">LOGIN</button>
+          </form>
+
+          
+          <button class="radius margin_top" type="submit"  ion-button full clear color="light" (click)="forgotPage()" >Forgot Password ?</button>
+          <div class="create">Don’t have an account? <span (click)="signupPage()"> Create Account </span> </div>
+        </ion-list>
+      </div>
+     
+    </div>
+  
+    <marquee direction = "right"><img width="120px" src="assets/img/cars.gif"></marquee>
+  
+  </ion-content>
+  

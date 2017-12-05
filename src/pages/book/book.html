@@ -1,0 +1,158 @@
+
+<ion-header>
+  
+    <ion-navbar color="navyb">
+      <ion-title> Book </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <form #bookrideForm="ngForm" >
+  <ion-list class="profileform" style="">
+  
+    <ion-item>
+      <ion-label>Service Type</ion-label>
+      <ion-select [(ngModel)]="data.services " name='services' #services="ngModel" >
+      
+        <ion-option *ngFor="let list of plan" [value]="list.Service.service">{{list.Service.service}}</ion-option>
+    
+      </ion-select>
+    </ion-item>
+    <ion-item class="align_right">
+      <ion-label>Pickup Date</ion-label>
+      <!-- <ion-input type="Date"  [(ngModel)]="data.date " name='date' #date="ngModel" ></ion-input> -->
+      <ion-datetime displayFormat="MM/DD/YYYY"  [(ngModel)]="minDate" placeholder="MM/DD/YYYY" max="2050-12-31" min="{{minDate}}" name='date' #date="ngModel"  ></ion-datetime>
+   
+      <div #map id="map" style="height:250px;position: initial;float:left;width:100%;"></div>
+    </ion-item>
+   
+    
+    <ion-item>
+      <ion-label class="align_right">Pickup Time</ion-label>
+      <!-- <ion-input type="time"  [(ngModel)]="data.time " name='time' #time="ngModel"></ion-input> -->
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="data.time "  name='time' #time="ngModel" placeholder="--:--" ></ion-datetime>
+    </ion-item>
+   
+    <ion-item (click)="openModal()">
+      <textarea class="textarea" readonly placeholder="Pickup Address" lineHeight="22"  [(ngModel)]="data.add" name='add' #add="ngModel"  ></textarea>
+    </ion-item>
+  
+  <ion-item>
+      <ion-label>Vehicle</ion-label>
+      <ion-select [(ngModel)]="data.vehicaltype" name='vehicaltype' #vehicaltype="ngModel"  >
+          <ion-option *ngFor="let vlist of vehicallist" [value]="vlist.Vehicle.vehicle_type">{{vlist.Vehicle.vehicle_type}}</ion-option>
+      </ion-select>
+  </ion-item>
+  
+  
+  
+    <ion-item style="width: 48%; float:left;">
+     <ion-label>Passengers</ion-label>
+      <ion-select [(ngModel)]="data.pass " name='pass' #pass="ngModel" >
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item style="width: 48.25%; float: right;">
+      <ion-label>Luggage</ion-label>
+      <ion-select [(ngModel)]="data.luggage " name='luggage' #luggage="ngModel" >
+        <ion-option value="0">0</ion-option>
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+  
+      </ion-select>
+    </ion-item>
+    <ion-item style="width: 48.25%; float:left;">
+      <ion-label>Child Seat</ion-label>
+      <ion-select [(ngModel)]="data.child " name='child' #child="ngModel" >
+        <ion-option value="0">0</ion-option>
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item style="width: 48.25%; float: right;">
+      <ion-label>Handicap</ion-label>
+      <ion-checkbox item-right color="dark" checked="true" [(ngModel)]="data.handicap " name='handicap' #handicap="ngModel" ></ion-checkbox>
+    </ion-item>
+  
+     <!-- <ion-item style="width: 48.25%; float: left;">
+      <ion-input type="text" placeholder="Airport Code"  [(ngModel)]="data.code " name='code' #code="ngModel" ></ion-input>
+    </ion-item> -->
+  
+    <ion-item style="width: 48.25%; float: left;">
+        <ion-label>Airport code</ion-label>
+        <ion-select [(ngModel)]="data.code " name='code' #code="ngModel" >
+        
+          <ion-option *ngFor="let codelist of aircode"  [value]="codelist.Airportcode.airportcode">{{codelist.Airportcode.airportcode}}</ion-option>
+      
+        </ion-select>
+      </ion-item>
+  
+   
+     <ion-item style="width: 48.25%; float: right;">
+      <ion-input type="text" placeholder=" Airline" [(ngModel)]="data.airline " name='airline' #airline="ngModel" ></ion-input>
+    </ion-item>
+    
+   
+    <ion-item style="width: 48.25%; float: left;">
+      <ion-input type="text" placeholder="Flight Number" [(ngModel)]="data.fnumber "  name='fnumber' #fnumber="ngModel"></ion-input>
+    </ion-item>
+   
+     <ion-item style="width: 48.25%; float: right;">
+      <ion-input type="text" placeholder=" Meet Options" [(ngModel)]="data.moption "  name='moption' #moption="ngModel" ></ion-input>
+    </ion-item>
+   
+    <ion-item class="align_right">
+      <ion-label class="align_right">ETA</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"  [(ngModel)]="data.eta " name='eta' #eta="ngModel" placeholder="--:--" ></ion-datetime>
+    </ion-item>
+  
+    <ion-item (click)="openModall()">
+        <textarea class="textarea" readonly placeholder="Dropoff Address" lineHeight="22"  [(ngModel)]="data.dadd" name='dadd' #dadd="ngModel" ></textarea>
+      </ion-item>
+  
+    
+    
+  </ion-list>
+  <button class="radius one"  (click)="bookride(bookrideForm)"  ion-button  full color="navyb" >Submit</button>
+  <button class="radius"  (click)="reset()"  ion-button full color="navyb">Reset</button>
+  
+  
+      <ion-grid style="padding:0;">
+          <ion-row style="padding:0;">
+            <ion-col col-6></ion-col>
+            <ion-col col-6></ion-col>
+          </ion-row>
+        </ion-grid>
+   
+  </form>
+  </ion-content>
+  
+  

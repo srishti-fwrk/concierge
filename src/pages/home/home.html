@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="navyb">
+    <ion-title>Concierge</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:#222;">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+ <ion-card class="customcard">
+    
+  <ion-card-content>
+      
+    <div class="userprofile">
+      <div class="userpro_outer">
+        <div class="userpic_pro">
+          <img [src]="srcImage">
+        </div>
+        <h1>{{profile?.first_name}}</h1>
+        <p>{{profile?.member_id}}</p>
+        <h2>{{plann?.plan}}</h2>
+      </div>
+      <div class="usertxt" *ngIf="plann?.available_transfers" >
+        <h2>{{month}}</h2>  
+        <ion-grid>
+          <ion-row>
+            <ion-col class="border_right rm_toppadding" col-4><p>Transfers</p><span class="point">{{profile?.transfers}}</span></ion-col>
+            <ion-col class="border_right rm_toppadding" col-4><p>Used</p><span class="point">{{profile?.used}}</span></ion-col>
+            <ion-col class="rm_toppadding" col-4><p>Remaining</p><span class="point">{{profile?.remaining}}</span></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </ion-card-content>
+
+</ion-card>
+  
+</ion-content>

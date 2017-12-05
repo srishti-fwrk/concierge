@@ -1,0 +1,32 @@
+page-messages {
+
+    .content {    
+    background-color: #222;
+    }
+
+    .massages .item{
+        padding-left: 0;
+    }
+    .massages .item .item-inner{
+        padding-right: 0;
+    }
+    .list-ios > .item-block:first-child {
+        border-top: none;
+    }
+    .list-ios{
+        margin-bottom:  12px ;
+    }
+    .notetime {
+        font-size: 11px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+.input-wrapper  {
+    background: #010101;
+    color: #ccc;
+    padding-left: 7px;
+
+}
+}

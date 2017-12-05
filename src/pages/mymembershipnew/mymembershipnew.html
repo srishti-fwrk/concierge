@@ -1,0 +1,57 @@
+<!--
+  Generated template for the MymembershipnewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="navyb">
+  
+    <ion-navbar hideBackButton color="navyb">
+      <ion-title>Select Plan</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="main_bg">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+    </ion-refresher> 
+      <ion-list radio-group>
+          <ion-item class="membershipplane customcard" *ngFor="let plans of plan" style="padding-left:0;">
+            <ion-label>
+                <div class="charter_txt">
+                    <h1 style="color:#ccc;">{{plans.SubscriptionPlan.plan}}</h1>
+                    <p>{{plans.SubscriptionPlan.text1}}</p>
+                    <p>{{plans.SubscriptionPlan.text2}}</p>
+                    <p> Effective Plan Date:{{plans.SubscriptionPlan.effectivedate  | date:'MMM d, y'}}</p>
+                  </div>
+  
+                  <div class="plan_strip">
+                      <a href="#">Pay Now !</a>
+                      <div class="price_tag">
+                        per month
+                       <h3> ${{plans.SubscriptionPlan.plan_amount}}</h3>
+                      </div>
+                    </div>
+  
+                    <!-- <div>
+                  <h3 *ngIf="plans[0].lastdate != null"> Effitive date:{{plans[0].lastdate | date:'yyyy/MM/dd'}}</h3>
+                    </div> -->
+            <ion-radio checked="{{ plans.SubscriptionPlan.id }}" value="{{ plans.SubscriptionPlan.id }}"  (click)="selectvalue(plans.SubscriptionPlan.available_transfers,plans.SubscriptionPlan.id)"></ion-radio>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+  
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar color="">
+        <ion-grid style="padding:0;">
+            <ion-row style="padding:0;">
+              <ion-col col-6><button class="radius" full color="navyb" ion-button (click)="tabPage()" >Skip</button></ion-col>
+              <ion-col col-6><button class="radius" full color="navyb" ion-button (click)="buyplan()">Next</button></ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-toolbar>
+  </ion-footer>
+  

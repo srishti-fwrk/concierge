@@ -1,0 +1,59 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navyb">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  no-padding class="main_bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+  <div class="profile_outer">
+    <div class="overlay"></div>
+    <div class="profile_pic">
+      <div class="user_profile">
+        <img [src]="srcImage">
+      </div>
+      <h4>{{profile?.first_name}}</h4>
+    </div>
+  </div>
+  <div class="porfilecard">
+     
+     <ion-card class="customcard">
+
+      <ion-card-header class="contactno">
+        {{profile?.phone}}
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>Email :</ion-col>
+            <ion-col col-8>{{profile?.email}}</ion-col>
+          </ion-row>
+          <ion-row *ngIf="profile?.address">
+            <ion-col col-4>Address :</ion-col>
+            <!-- <ion-col col-8>{{profile?.address}},{{profile?.zip}}</ion-col> -->
+
+            <ion-col col-8><span *ngIf="profile?.address">{{profile?.address}}</span><span *ngIf="profile?.zip">,{{profile?.zip}}</span></ion-col>
+          </ion-row>
+           <ion-row>
+            <ion-col col-12><button (click)="profileeditPage()" color="navyb" class="radius" full ion-button>EDIT PROFILE</button></ion-col>
+          </ion-row>
+          
+        </ion-grid>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+</ion-content>

@@ -1,0 +1,99 @@
+page-profile {
+    .profile_outer{
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        background: url(../assets/img/probg.jpg) no-repeat;
+        background-size: cover;
+    }
+    .overlay{
+        background: rgba(31,24,36,0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .profile_pic {
+        position: absolute;
+        height: 170px;
+        margin: auto;
+        width: 150px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .user_profile {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0px auto;
+    }
+    .user_profile img {
+        position: absolute;
+        height: 100%;
+        margin: auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .profile_pic h4{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+        font-weight: normal;
+    }
+    .porfilecard{
+        position: relative;
+    }
+    .customcard{
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+        position: absolute;
+        top: -50px;
+    }
+    .contactno{
+        font-size: 20px;
+        text-align: center;
+        color: #ccc;
+        font-weight: 400;
+
+    }
+    
+   .content { 
+    background: #222;
+}
+
+page-profile .contactno {
+    font-size: 20px;
+    text-align: center;
+    color: #ccc;
+    font-weight: 400;
+}
+.contactno.card-header.card-header-ios{
+        background-color: #010101;
+        color: #ccc;
+}
+ion-card-content.card-content.card-content-ios{
+    background-color: #010101;
+    color: #ccc;
+
+}
+
+
+.button-ios-navyb {
+    color: #222;
+    background-color: #f2f2f2;
+}
+
+
+}
+
+

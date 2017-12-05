@@ -1,0 +1,136 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+
+*body{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-weight: 400;
+}
+
+
+ion-app.ios [padding], ion-app.ios [padding] .scroll-content{
+    // padding: 0 !important;
+}
+
+.radius{
+    border-radius: 5px;
+}
+.margin_top{
+    margin-top: 15px;
+}
+
+
+.main_bg{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3ecfe+0,e4e6fc+100 */
+    background: #f3ecfe; /* Old browsers */
+    background: -moz-linear-gradient(top, #f3ecfe 0%, #e4e6fc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f3ecfe 0%,#e4e6fc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f3ecfe 0%,#e4e6fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3ecfe', endColorstr='#e4e6fc',GradientType=0 ); /* IE6-9 */
+}
+
+
+marquee{display: none;}
+form {
+    height: 100%;
+}
+
+.back-button-text{
+    display: none !important;
+}
+.back-button-text-ios{
+    display: none !important;
+}
+// .toolbar-title-ios{
+//     margin-top: -20px;
+// }
+.button-ios-navyb.activated{
+    background-color: #333 !important;
+    color: #fff !important;
+}
+.button-ios-light.activated{
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+textarea,.text-input{
+    color: #fff !important;
+}
+
+.back-button-icon-ios {
+    font-size: 2.4rem;
+}
+// .back-button {
+//     margin-top: -20px;
+// }
+.text-input::-moz-placeholder {
+  color: #fff !important;
+  font-family: roboto;
+  font-size: 12px;
+}
+.text-input::-webkit-input-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+.text-input:-ms-input-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+.text-input::-moz-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+.text-input{
+    color: #fff !important;
+}
+
+
+
+.textarea::-moz-placeholder {
+  color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+.textarea::-webkit-input-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+.textarea:-ms-input-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+
+.textarea::-moz-placeholder {
+    color: #fff !important;
+  font-size: 12px;
+  font-family: roboto;
+}
+.textarea{
+    color: #fff !important;
+    font-family: roboto;
+}

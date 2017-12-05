@@ -1,0 +1,114 @@
+page-profileedit {
+    .pro_outer{
+        width: 100%;
+        position: relative;
+        height: 120px;
+    }
+
+    .propic {
+        position: absolute;
+        height: auto;
+        margin: auto;
+        width: 150px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .profile_inn {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0px auto;
+    }
+    .camera {
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+        border-radius: 50%;
+        width: 35px;
+        height: 36px;
+        font-size: 12px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background: #1f1824;
+    }
+
+    .profile_user {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0px auto;
+    }
+    .profile_user img {
+        position: absolute;
+        height: 100%;
+        margin: auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    ion-select {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.profileform .item{
+    padding-left: 0;
+    margin-bottom: 10px;
+    background: none;
+    font-size: 12px;
+}
+.profileform .item:first-child{
+    border-top: none;
+}
+.profileform .select-ios {
+    padding: 11px 8px 11px 0;
+    width: 100%;
+}
+.profileform textarea{
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.scroll-content {
+    margin-top: 64px;
+    margin-bottom: 49px;
+    background-color: #222;
+}
+    
+input.text-input.text-input-ios {
+    color: #ccc;
+
+}
+
+textarea.textarea.ng-valid.ng-dirty.ng-touched {
+    color: #ccc;
+}
+.select-text{
+    color:#ccc;
+}
+
+// span.button-inner {
+//     color: #000;
+// }
+.camerabg{
+    color: #222;
+    background-color: #000;
+
+}
+.button-ios-navyb {
+    color: #222;
+    background-color: #f2f2f2;
+}
+}
+
+

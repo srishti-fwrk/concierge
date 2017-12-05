@@ -1,0 +1,50 @@
+page-forgot {
+
+.loginsec{
+    padding: 5vh 0 0 0;
+        margin-top: 0px;
+    }
+.loginsec h3{
+    color: #fff; 
+    text-align: center;
+    font-size: 25px;
+    margin: 0px;
+}
+    
+.loginsec h5{
+    color: #212121; 
+    text-align: center;
+    font-size: 14px;
+    }
+.form_outer .item{
+    padding-left: 0;
+    margin-bottom: 10px;
+    background: none;
+}
+.form_outer .item:first-child{
+    border-top: none;
+}
+.form_outer{
+    padding-top: 8vh;
+}
+marquee {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+.create{
+    color: #212121;
+}
+.create span{
+    color: #212121;
+    font-weight: 500;
+}
+.text-input-ios {
+    margin: 11px 8px 11px 0;
+    padding: 0;
+    width: calc(100% - 8px);
+    color: #fff;
+}
+
+}
