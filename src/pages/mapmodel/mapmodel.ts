@@ -106,8 +106,7 @@ export class MapmodelPage {
 		   if (status == google.maps.GeocoderStatus.OK) {
           if (results[1]) {
               this.autocomplete.query= results[1].formatted_address;
-              console.log("srishti")
-              console.log( this.autocomplete.query)
+           
                     }
                 }
 		   
